@@ -38,7 +38,7 @@ test_proba = model.predict_proba(test_df.drop("id", axis=1))[:, 1]
 submission_df = pd.DataFrame({'smoking': test_proba}, index=test_df["id"])
 submission_df.to_csv("sample_submission.csv")
 
-#THE RESULTS OF THE TRAINING
+# THE RESULTS OF THE TRAINING
 Meilleurs hyperparamètres (XGBoost - Randomized) : {'colsample_bytree': 0.6624074561769746, 'learning_rate': 0.05679835610086079, 'max_depth': 5, 'n_estimators': 558, 'subsample': 0.9464704583099741}
 AUC-ROC moyenne (Validation Croisée Stratifiée) : 0.9305
 
